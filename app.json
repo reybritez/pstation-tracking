@@ -1,0 +1,20 @@
+{
+    "name": "gryffindor test",
+    "repository": "based on: https://github.com/umluizlima/flask-pwa",
+    "env": {
+        "SECRET_KEY": {
+            "description": "Secret key for Flask.",
+            "value": "hzPiFFswjsNsdfsdfasfdasasd7D7aXH4MhrP3ANX2kpuwS0mRaQWbH4Sc"
+        },
+        "FLASK_ENV": {
+            "description": "venv",
+            "value": "production"
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
