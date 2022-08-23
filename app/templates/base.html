@@ -26,11 +26,23 @@
 
   <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
   <script>
-    var menu = document.getElementById('menu');
+    var menu = document.getElementById("mobile-menu");
+
+    // open/close the menu when the user clicks on the button
     function toggleMenu() {
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('w-full');
-        menu.classList.toggle('h-screen');
+        if (menu.classList.contains('block')) {
+            menu.classList.remove('block');
+        } else {
+            menu.classList.add('hidden');
+        }
+    }
+
+    // close the menu when the user clicks outside of it 
+    window.onclick = function (event) {
+        var dropdownWrapper = document.getElementById('mobile-menu');
+        if (!dropdownWrapper.contains(event.target) && !menu.classList.contains('hidden')) {
+            menu.classList.add('block');
+        }
     }
 </script>
 </body>
