@@ -25,6 +25,14 @@
   {% block body %}{% endblock %}
 
   <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script>
+    var menu = document.getElementById('menu');
+    function toggleMenu() {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('h-screen');
+    }
+</script>
 </body>
 
 </html>
